@@ -1,7 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"  pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
    
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
  <spring:url var="css" value="/resources/css"/>
@@ -54,6 +56,10 @@ window.menu='${title}'
    
       <c:if test="${userClickContact == true}">
    <%@include file="contact.jsp" %>
+   </c:if>
+   
+       <c:if test="${userClickCategoryProducts == true or  userClickAllProducts==true}">
+   <%@include file="listproduct.jsp" %>
    </c:if>
    </div>
    <!-- footer conmes here -->

@@ -16,6 +16,7 @@ xmlns:mvc="http://www.springframework.org/schema/mvc"
    ">
    
    <context:component-scan base-package="net.kun.onlineShoping.controller"></context:component-scan>
+   <context:component-scan base-package="net.kun.shopingBeckend.daoimpl"></context:component-scan>
    <bean id="ViewResolver"
 	 class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
    <property name = "prefix" value = "/WEB-INF/views/"/>
