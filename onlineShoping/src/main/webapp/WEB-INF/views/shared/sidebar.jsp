@@ -6,7 +6,7 @@
 
 
 <c:forEach  items="${categories}"  var="category">
-<a href="${contextRoot}/show/all/${category.id}/products" class="list-group-item">
+<a href="${contextRoot}/show/all/${category.id}/products" class="list-group-item" id="a_${category.name}">
  
 ${category.name}
 
