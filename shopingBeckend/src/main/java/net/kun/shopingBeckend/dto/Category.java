@@ -1,8 +1,14 @@
 package net.kun.shopingBeckend.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Category {
 
-	private int id;
 
 	public int getId() {
 		return id;
@@ -43,14 +49,40 @@ public class Category {
 	public void setImgeURL(String imgeURL) {
 		this.imgeURL = imgeURL;
 	}	
+	
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imgeURL=" + imgeURL
+				+ ", active=" + active + ", getId()=" + getId() + ", getName()=" + getName() + ", getDescription()="
+				+ getDescription() + ", isActive()=" + isActive() + ", getImgeURL()=" + getImgeURL() + "]";
+	}
+
+
+
+
 
 	/*
 	 * Private member
 	 * 
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY )
+	private int id;
+
 	private String name;
+	
+	
 	private String description;
-	private boolean active = true;
+	
+	@Column(name="image_url") 
 	private String imgeURL;
+	
+	
+	@Column(name="is_active")
+	private boolean active = true;			
 
 }

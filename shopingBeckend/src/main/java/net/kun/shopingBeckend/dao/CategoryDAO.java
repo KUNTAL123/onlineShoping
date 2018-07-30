@@ -4,9 +4,15 @@ import java.util.List;
 
 import net.kun.shopingBeckend.dto.Category;
 
-public interface CategoryDAO {
-	
-	List<Category> list();
+public interface CategoryDAO { 
 	Category get(int id);
+	List<Category> list();
+	boolean add(Category category); 
+	boolean update(Category category); 
+	boolean delete(Category category);
+	
+	
+	
+
 
 }

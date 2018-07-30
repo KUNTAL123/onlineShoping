@@ -20,12 +20,15 @@
 
     <title>Online Shopping - ${title}</title>
 <script>
-window.menu='${title}'
+window.menu='${title}';
+window.contextRoot='${contextRoot}';
 </script>
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.css" rel="stylesheet">
     <!-- Bootstrap readable them css-->
     <link href="${css}/bootreadable.css" rel="stylesheet">
+<!--  datatble css-->
+    <link href="${css}/dataTables.bootstrap.css " rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -69,7 +72,17 @@ window.menu='${title}'
 
     <!-- JavaScript -->
     <script src="${js}/jquery.js"></script>
-    <script src="${js}/bootstrap.js"></script>
+   
+   
+   <script src="${js}/bootstrap.js"></script>
+   
+   <!-- data table -->
+   
+       <script src="${js}/datatables.js"></script>
+   
+  <!--datatabel   -->
+         <script src="${js}/dataTables.bootstrap.js"></script>
+  
 <!--self codded js file  -->
 
     <script src="${js}/myapp.js"></script>

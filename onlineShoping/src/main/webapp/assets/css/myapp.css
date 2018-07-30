@@ -19,6 +19,8 @@ body {
 	border-radius: 4px;
 }
 
+
+
 .caption {
 	height: 130px;
 	overflow: hidden;
@@ -65,4 +67,10 @@ footer {
 	position:absolute;
 	bottom:0;
 	hetight:60px;
+}
+
+  
+.dataTableimg{
+	width:50px;
+	height:100px;
 }
