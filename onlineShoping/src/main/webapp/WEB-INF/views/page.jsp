@@ -60,10 +60,21 @@ window.contextRoot='${contextRoot}';
       <c:if test="${userClickContact == true}">
    <%@include file="contact.jsp" %>
    </c:if>
-   
+   <!--Load only when user click viewproduct  -->
        <c:if test="${userClickCategoryProducts == true or  userClickAllProducts==true}">
    <%@include file="listproduct.jsp" %>
    </c:if>
+   
+     <!--Load only when user click Contact Us  -->
+   
+      <c:if test="${UserClickShowProduct == true}">
+   <%@include file="singleProduct.jsp" %>
+   </c:if>
+   <!--load only when click manage prodct - -->
+    <c:if test="${userClickManageProducts == true}">
+   <%@include file="manageProducts.jsp" %>
+   </c:if>
+   
    </div>
    <!-- footer conmes here -->
    

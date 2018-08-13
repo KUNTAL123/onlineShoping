@@ -53,6 +53,7 @@ window.categoryId='${category.id}';
 <th>Brand</th>
 <th>Price</th>
 <th>Qty.Avilable</th>
+<th></th>
 </tr>
 
 </thead>
@@ -64,6 +65,7 @@ window.categoryId='${category.id}';
 <th>Brand</th>
 <th>Price</th>
 <th>Qty.Avilable</th>
+<th></th>
 </tr>
 
 </tfoot>

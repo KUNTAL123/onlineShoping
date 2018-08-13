@@ -1,4 +1,7 @@
 $(function(){
+	
+	console.log(menu);
+
 	switch(menu){
 	
 	case 'About Us':
@@ -10,10 +13,14 @@ $(function(){
 	case 'listproduct':
 		$('#All Products').addClass('active');
 		break;
+	case 'Manage Products':
+		console.log(menu);
+		$('#Manage Products').addClass('active');
+		break;		
 	default:
 		$('#listproduct').addClass('active');
 	   $('#a_'+menu).addClass('active');
-		break;
+		
 	
 	}
 	
@@ -29,6 +36,8 @@ $(function(){
 	
 		if($table.length){ 
 		console.log('indside this table');
+		
+
 			
 			var jsonUrl='';
 			if(categoryId=='')
@@ -72,7 +81,7 @@ $(function(){
 				         },
 				        
 				         {
-				        	 data:'udnitPrice',
+				        	 data:'unitPrice',
 				           mRender:function(data,type,row){
 				        	 return '&#8377 '+data  
 				           }	 
@@ -81,8 +90,29 @@ $(function(){
 				        	 data:'quantity'
 				         },
 				         
+				         {
+				        	data:'id',
+				          
+				        	mRender:function(data,type,row)
+				        	{
+				        		
+				        		var str='';
+				        		str+='<a href="'+window.contextRoot+'/show/'+data+'/product" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a>&#160;';
+				        		str+='<a href="'+window.contextRoot+'/cart/add'+data+'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span>	</a>';
+				        		return str 
+				        	}
+				         }
 				         ]
 			});
 		}
-	
-});
+	//dismissing the alert after 3 second
+		
+		$alert=$('.alert');
+		
+		if($alert.length)
+			{
+			setTimeout(function(){
+			 $alert.fadeOut('slow');	
+			},3000)
+			}
+}); 

@@ -17,7 +17,7 @@ public class Product {
 	private String brand;
 	private String description;
 	@Column(name="unit_price")
-	private double udnitPrice;
+	private double unitPrice;
 	private int quantity;
 	@Column(name="is_active")
 	private boolean active;
@@ -57,11 +57,12 @@ public class Product {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public double getUdnitPrice() {
-		return udnitPrice;
+	
+	public double getUnitPrice() {
+		return unitPrice;
 	}
-	public void setUdnitPrice(double udnitPrice) {
-		this.udnitPrice = udnitPrice;
+	public void setUnitPrice(double unitPrice) {
+		this.unitPrice = unitPrice;
 	}
 	public int getQuantity() {
 		return quantity;

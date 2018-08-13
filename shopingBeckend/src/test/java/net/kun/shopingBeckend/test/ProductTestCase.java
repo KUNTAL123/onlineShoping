@@ -32,7 +32,7 @@ private Product product=null;
 		product.setName("oppo Selfie S53");
 		product.setBrand("oppo");
 		product.setDescription("This is some description of oppo mobile phone");
-		product.setUdnitPrice(25000);
+		product.setUnitPrice(25000);
 		product.setActive(true);
 		product.setCategoryId(3);
 		product.setSupplierId(3);
