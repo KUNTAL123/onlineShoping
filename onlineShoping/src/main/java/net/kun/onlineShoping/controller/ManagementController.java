@@ -32,7 +32,7 @@ public ModelAndView showMangeProducts(@RequestParam(name="operation",required=fa
 	ModelAndView mv =new ModelAndView("page");
 	
 	mv.addObject("userClickManageProducts",true);
-	mv.addObject("title","Manage Products");
+	mv.addObject("title","ManageProducts");
     Product nproduct=new Product();
     // set few of the fields
     
