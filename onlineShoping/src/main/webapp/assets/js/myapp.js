@@ -1,6 +1,5 @@
 $(function(){
 	
-//	console.log(menu);
 
 	switch(menu){
 	
@@ -14,7 +13,8 @@ $(function(){
 		$('#All Products').addClass('active');
 		break;
 	case 'Manage Products':
-		$('#Manage Products').addClass('active');
+		console.log(menu);
+	$('#manageProducts').addClass('active');
 		break;		
 	default:
 		$('#listproduct').addClass('active');
